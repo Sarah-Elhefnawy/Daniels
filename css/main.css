@@ -1,7 +1,7 @@
 /* Start of global style */
 :root {
-    --primary-font: primary;
-    --secondary-font: secondary;
+    --primary-font: primary, sans-serif;
+    --secondary-font: secondary, sans-serif;
 }
 
 @font-face {
@@ -19,6 +19,54 @@
 }
 /* End of global style */
 
+/* Start of navbar */
+.navbar {
+    --bs-navbar-nav-link-padding-x: 0;
+    /* --bs-navbar-nav-link-padding-y: 1; */
+}
+
+.navbar-nav {
+    --bs-nav-link-padding-y: 0.15rem;
+}
+
+.nav a.navbar-brand {
+    color: #1C1C1C;
+    font-family: var(--primary-font);
+    font-size: 1.5rem;
+    line-height: 3.75rem;
+    letter-spacing: .0625rem;
+    padding: .125rem 0 0;
+    font-weight: 800;
+}
+
+.nav .navbar-nav > li.nav-item {
+    color: #111111;
+    font-size: 1.02rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    font-family: var(--secondary-font);
+}
+
+.navbar-nav > li > a::after {
+    content: "";
+    width: 0;
+    height: .1875rem;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.navbar-nav > li .active::after {
+    width: 100%;
+}
+.navbar-nav > li > a::after {
+    background: #222;
+}
+/* End of navbar */
+
 /* Start of header */
 .header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7) 
@@ -26,7 +74,7 @@
     background-position: 0px 0px;
     background-size:cover;
     background-repeat: no-repeat;
-    font-family: primary, sans-serif;
+    font-family: var(--primary-font), sans-serif;
 }
 
 .header h5 {
