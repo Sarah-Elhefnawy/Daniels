@@ -1,0 +1,44 @@
+/* Start of global style */
+:root {
+    --primary-font: primary;
+    --secondary-font: secondary;
+}
+
+@font-face {
+    font-family: primary;
+    src: url(./../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: secondary;
+    src: url(./../fonts/Poppins/Poppins-Regular.ttf);
+}
+
+.max-500 {
+    max-width: 31.25rem;
+}
+/* End of global style */
+
+/* Start of header */
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7) 
+    ), url(./../images/bg.jpg);
+    background-position: 0px 0px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    font-family: primary, sans-serif;
+}
+
+.header h5 {
+    font-size: 3.125rem;
+    font-weight: 800;
+    line-height: 3.4375rem;
+    margin-bottom: .625rem;
+}
+
+.header h1 {
+    font-size: 1.875rem;
+    font-weight: 200;
+    line-height: 2.25rem;
+}
+/* End of header */
