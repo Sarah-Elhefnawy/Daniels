@@ -135,7 +135,7 @@ body {
     -o-transform: translate(-3%, -3%);
 }
 
-.about .about-img::before {
+.about .about-img::after {
     content: "";
     position: absolute;
     top: 0;
@@ -223,3 +223,63 @@ body {
 }
 
 /* End of about */
+
+/* Start of Services */
+.service h3 {
+    font-family: var(--primary-font);
+    color: #343434;
+    font-size: 50px;
+    line-height: 2.75rem;
+    font-weight: 900;
+    text-transform: capitalize;
+    position: relative;
+    z-index: 4;
+}
+
+.service h3::before {
+    content: "";
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 40px;
+    background-image: url(./../images/black-white-halftone-pattern-texture-background_84443-21975.png);
+    background-position: 0 0;
+    background-size: cover;
+    display: flex;
+    z-index: -1;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.service .icon {
+    width: 100px;
+    height: 100px;
+    background-color: #00000011;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.service .service-inner:hover .icon {
+    background-color: #000;
+}
+
+.service .service-inner:hover i {
+    color: #fff;
+}
+
+/* End of Services */
