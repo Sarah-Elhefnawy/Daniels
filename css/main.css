@@ -255,6 +255,24 @@ body {
     -o-transform: translate(-50%, -50%);
 }
 
+.service h6 {
+    color: #343434;
+    font-family: var(--primary-font);
+    font-size: 22px;
+    line-height: 21px;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.service p {
+    color: #748182;
+    font-family: var(--secondary-font);
+    font-size: 18px;
+    line-height: 26px;
+    word-spacing: 1.4px;
+    font-weight: 400;
+}
+
 .service .icon {
     width: 100px;
     height: 100px;
@@ -267,11 +285,11 @@ body {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.8s ease-in-out;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
 }
 
 .service .service-inner:hover .icon {
@@ -283,3 +301,19 @@ body {
 }
 
 /* End of Services */
+
+/* Start of footer */
+.footer {
+    background-color: #1C1C1C;
+}
+
+.footer p {
+    color: #748182;
+    font-family: var(--secondary-font);
+    font-size: 15px;
+    line-height: 22px;
+    word-spacing: 3px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+/* End of footer */
