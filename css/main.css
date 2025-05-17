@@ -18,9 +18,14 @@ body {
     font-family: var(--secondary-font);
 }
 
+/* section {
+    padding: 100px 0;
+} */
+
 .max-500 {
     max-width: 31.25rem;
 }
+
 /* End of global style */
 
 /* Start of navbar */
@@ -43,7 +48,7 @@ body {
     font-weight: 800;
 }
 
-.nav .navbar-nav > li.nav-item {
+.nav .navbar-nav>li.nav-item {
     color: #111111;
     font-size: 1.02rem;
     line-height: 1.25rem;
@@ -51,7 +56,7 @@ body {
     font-family: var(--secondary-font);
 }
 
-.navbar-nav > li > a::after {
+.navbar-nav>li>a::after {
     content: "";
     width: 0;
     height: .1875rem;
@@ -63,20 +68,21 @@ body {
     transition: all 0.5s;
 }
 
-.navbar-nav > li .active::after {
+.navbar-nav>li .active::after {
     width: 100%;
 }
-.navbar-nav > li > a::after {
+
+.navbar-nav>li>a::after {
     background: #222;
 }
+
 /* End of navbar */
 
 /* Start of header */
 .header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7) 
-    ), url(./../images/bg.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7)), url(./../images/bg.jpg);
     background-position: 0px 0px;
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     font-family: var(--primary-font), sans-serif;
 }
@@ -116,4 +122,104 @@ body {
     margin: 2.5rem .625rem 0 0;
     cursor: pointer;
 }
+
 /* End of header */
+
+/* Start of about */
+.about .about-img {
+    position: relative;
+    transform: translate(-3%, -3%);
+    -webkit-transform: translate(-3%, -3%);
+    -moz-transform: translate(-3%, -3%);
+    -ms-transform: translate(-3%, -3%);
+    -o-transform: translate(-3%, -3%);
+}
+
+.about .about-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 75%;
+    height: 100%;
+    background-image: url(./../images/black-white-halftone-pattern-texture-background_84443-21975.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    transform: translate(-4%, 5%);
+    -webkit-transform: translate(-4%, 5%);
+    -moz-transform: translate(-4%, 5%);
+    -ms-transform: translate(-4%, 5%);
+    -o-transform: translate(-4%, 5%);
+}
+
+.about h3 {
+    font-family: var(--primary-font);
+    color: #343434;
+    font-size: 2.425rem;
+    line-height: 2.0625rem;
+    margin-bottom: .75rem;
+    font-weight: 800;
+    text-transform: capitalize;
+}
+
+.about>span {
+    font-family: var(--secondary-font);
+    color: #999999;
+    font-size: 1.1875rem;
+    line-height: 1.25rem;
+    margin-bottom: 1.25rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.about p {
+    font-family: var(--secondary-font);
+    color: #748182;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+    max-width: 45rem;
+}
+
+.progress {
+    --bs-progress-height: 2.4rem;
+    --bs-progress-font-size: 1em;
+    box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+    --bs-btn-padding-x: 2.75rem;
+    --bs-btn-padding-y: 0.7rem;
+    --bs-btn-font-family: var(--secondary-font);
+    --bs-btn-hover-border-color: #000;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+.about-btns>button:nth-child(1) {
+    background-color: #000;
+    color: #fff;
+}
+
+.about-btns>button:hover {
+    background-color: transparent;
+    color: #000;
+}
+
+.about-btns button:nth-child(2) {
+    background-color: transparent;
+    border: 1px solid #000;
+}
+
+.about-btns button:nth-child(2):hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* End of about */

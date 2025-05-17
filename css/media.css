@@ -1,0 +1,5 @@
+@media (min-width: 992px){
+    .about .p {
+        max-width: 535px;
+    }
+}
