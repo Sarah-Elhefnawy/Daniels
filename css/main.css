@@ -2,6 +2,7 @@
 :root {
     --primary-font: primary, sans-serif;
     --secondary-font: secondary, sans-serif;
+    --bg-main: #F7F7F7;
 }
 
 @font-face {
@@ -26,6 +27,43 @@ body {
     max-width: 31.25rem;
 }
 
+.bg-main {
+    background-color: var(--bg-main);
+}
+
+.service h3,
+.work h3 {
+    font-family: var(--primary-font);
+    color: #343434;
+    font-size: 50px;
+    line-height: 2.75rem;
+    font-weight: 900;
+    text-transform: capitalize;
+    position: relative;
+    z-index: 4;
+}
+
+.service h3::before,
+.work h3::before {
+    content: "";
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 40px;
+    background-image: url(./../images/black-white-halftone-pattern-texture-background_84443-21975.png);
+    background-position: 0 0;
+    background-size: cover;
+    display: flex;
+    z-index: -1;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    opacity: 0.5;
+}
+
 /* End of global style */
 
 /* Start of navbar */
@@ -36,6 +74,47 @@ body {
 
 .navbar-nav {
     --bs-nav-link-padding-y: 0.15rem;
+}
+
+.navbar-toggler {
+    border: 0;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.nav a.nav-link {
+    color: #111111;
+    font-family: var(--secondary-font);
+    font-size: 16px;
+    line-height: 1.5625rem;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.nav a.nav-link:hover {
+    color: #111111;
+}
+
+.navbar-nav>li>a::after {
+    content: "";
+    width: 0;
+    height: .1875rem;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.navbar-nav>li a.active::after {
+    width: 100%;
+}
+
+.navbar-nav>li>a::after {
+    background: #222;
 }
 
 .nav a.navbar-brand {
@@ -54,26 +133,6 @@ body {
     line-height: 1.25rem;
     font-weight: 400;
     font-family: var(--secondary-font);
-}
-
-.navbar-nav>li>a::after {
-    content: "";
-    width: 0;
-    height: .1875rem;
-    background: #fff;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-}
-
-.navbar-nav>li .active::after {
-    width: 100%;
-}
-
-.navbar-nav>li>a::after {
-    background: #222;
 }
 
 /* End of navbar */
@@ -225,36 +284,6 @@ body {
 /* End of about */
 
 /* Start of Services */
-.service h3 {
-    font-family: var(--primary-font);
-    color: #343434;
-    font-size: 50px;
-    line-height: 2.75rem;
-    font-weight: 900;
-    text-transform: capitalize;
-    position: relative;
-    z-index: 4;
-}
-
-.service h3::before {
-    content: "";
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 250px;
-    height: 40px;
-    background-image: url(./../images/black-white-halftone-pattern-texture-background_84443-21975.png);
-    background-position: 0 0;
-    background-size: cover;
-    display: flex;
-    z-index: -1;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-}
-
 .service h6 {
     color: #343434;
     font-family: var(--primary-font);
@@ -301,6 +330,76 @@ body {
 }
 
 /* End of Services */
+
+/* Start of testimonials */
+.work {
+    font-family: var(--secondary-font);
+}
+
+.work img {
+    width: 7rem;
+}
+
+.work p {
+    color: #748182;
+    font-size: 20px;
+    line-height: 28px;
+    word-spacing: 3px;
+    font-weight: 400;
+}
+
+.work h6 {
+    color: #343434;
+    font-family: var(--primary-font);
+    font-size: 20px;
+    line-height: 18.5px;
+    margin: 30px 0 5px;
+    font-weight: 600;
+}
+
+.work span {
+    color: #888888;
+    font-size: 15px;
+    line-height: 18.5px;
+    margin-bottom: 3px;
+    font-weight: 600;
+}
+
+.work .inner {
+    /* user-select: none; */
+}
+
+/* Remove Bootstrap carousel styles */
+/* .swiper {
+  cursor: grab;
+  user-select: none;
+}
+
+.swiper:active {
+  cursor: grabbing;
+} */
+
+.carousel-inner {
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel-inner:active {
+  cursor: grabbing;
+}
+
+.work .carousel-indicators [data-bs-target] {
+    height: 15px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: #00000060;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 12px;
+}
+/* End of testimonials */
 
 /* Start of footer */
 .footer {
