@@ -80,6 +80,33 @@ section>.container>header>h3::before {
     opacity: 0.5;
 }
 
+.main-icon {
+    width: 100px;
+    height: 100px;
+    background-color: #00000011;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.8s ease-in-out;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+}
+
+.inner:hover .main-icon {
+    background-color: #000;
+}
+
+.inner:hover i {
+    color: #fff;
+}
+
 /* End of global style */
 
 /* Start of navbar */
@@ -261,7 +288,7 @@ section>.container>header>h3::before {
     -o-transition: all .5s ease-in-out;
 }
 
-.about-btns>button:nth-child(1) {
+.custom-btn {
     background-color: #000;
     color: #fff;
 }
@@ -300,33 +327,6 @@ section>.container>header>h3::before {
     line-height: 26px;
     word-spacing: 1.4px;
     font-weight: 400;
-}
-
-.service .icon {
-    width: 100px;
-    height: 100px;
-    background-color: #00000011;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    transition: all 0.8s ease-in-out;
-    -webkit-transition: all 0.8s ease-in-out;
-    -moz-transition: all 0.8s ease-in-out;
-    -ms-transition: all 0.8s ease-in-out;
-    -o-transition: all 0.8s ease-in-out;
-}
-
-.service .service-inner:hover .icon {
-    background-color: #000;
-}
-
-.service .service-inner:hover i {
-    color: #fff;
 }
 
 /* End of Services */
@@ -688,6 +688,35 @@ section>.container>header>h3::before {
     color: #000;
 }
 /* End of team */
+
+/* Start of contact */
+.contact h6 {
+    color: #343434;
+    font-family: var(--primary-font);
+    font-size: 20px;
+    line-height: 19px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.contact p {
+    color: #748182;
+    font-family: var(--secondary-font);
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400;
+}
+
+.contact .inner>[class~="form-control"] {
+    --bs-body-bg: #F4F4F4;
+    --bs-border-width: 0;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+/* End of contact */
 
 /* Start of footer */
 .footer {
