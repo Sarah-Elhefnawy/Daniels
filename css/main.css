@@ -57,7 +57,6 @@ section>.container>header>h3 {
     position: relative;
     z-index: 4;
     display: inline-block;
-    /* padding-bottom: 20px; */
 }
 
 section>.container>header>h3::before {
@@ -379,10 +378,6 @@ section>.container>header>h3::before {
     line-height: 22.8571px;
 }
 
-
-
-
-
 .portfolio figcaption.fig-caption {
     position: absolute;
     top: 20%;
@@ -590,6 +585,109 @@ section>.container>header>h3::before {
     font-weight: 600;
 }
 /* End of numbers */
+
+/* Start of team */
+.team h4 {
+    font-family: var(--primary-font);
+    font-size: 26px;
+    line-height: 28px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.team h5 {
+    font-family: var(--primary-font);
+    font-size: 21px;
+    line-height: 23px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.team .card {
+    --bs-card-spacer-y: 1.5rem;
+    --bs-card-spacer-x: 2rem;
+}
+
+.team img {
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.team .card-inner:hover img {
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+}
+
+.team .team-icons {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.878);
+    z-index: 66;
+    opacity: 0;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -ms-transform: rotateY(0);
+    -o-transform: rotateY(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team .card-inner a {
+    color: #fff;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+}
+
+.team .card-inner .icon:hover a {
+    color: #000;
+}
+
+.team .card-inner .team-icons .icon {
+    border: 0 solid #000;
+    background-color: #000;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+}
+
+.team .card-inner .icon:hover {
+    background-color: #fff;
+    border-width: 1px;
+}
+
+.team .card:hover .team-icons {
+    opacity: 1;
+    transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+    border-width: 1px;
+    color: #000;
+}
+/* End of team */
 
 /* Start of footer */
 .footer {
