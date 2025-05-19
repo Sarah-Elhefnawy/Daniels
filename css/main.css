@@ -3,6 +3,13 @@
     --primary-font: primary, sans-serif;
     --secondary-font: secondary, sans-serif;
     --bg-main: #F7F7F7;
+    --bg-dark: #0000005a;
+    --text-primary: #000;
+    --text-secondary: #343434;
+    --text-grey: #748182;
+    --text-3: #fff;
+    --text-4: #222;
+    --text-5: #ffffffe0;
 }
 
 @font-face {
@@ -19,12 +26,8 @@ body {
     font-family: var(--secondary-font);
 }
 
-/* section {
-    padding: 100px 0;
-} */
-
 .max-500 {
-    max-width: 31.25rem;
+    max-width: 500px;
 }
 
 .bg-main {
@@ -34,7 +37,7 @@ body {
 .icon {
     width: 2.5rem;
     height: 2.5rem;
-    background-color: #0000005a;
+    background-color: var(--text-5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,9 +50,18 @@ body {
     cursor: pointer;
 }
 
+h3 {
+    color: var(--text-secondary);
+    font-family: var(--primary-font);
+    font-size: 32px;
+    line-height: 35px;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
 section>.container>header>h3 {
     font-family: var(--primary-font);
-    color: #343434;
+    color: var(--text-secondary);
     font-size: 50px;
     line-height: 2.75rem;
     font-weight: 900;
@@ -80,10 +92,19 @@ section>.container>header>h3::before {
     opacity: 0.5;
 }
 
+h6.text {
+    color: var(--text-secondary);
+    font-family: var(--primary-font);
+    font-size: 22px;
+    line-height: 21px;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
 .main-icon {
     width: 100px;
     height: 100px;
-    background-color: #00000011;
+    background-color: var(--bg-main);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,11 +121,40 @@ section>.container>header>h3::before {
 }
 
 .inner:hover .main-icon {
-    background-color: #000;
+    background-color: var(--text-primary);
+}
+
+.inner i {
+    transition: all 0.8s ease-in-out;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
 }
 
 .inner:hover i {
-    color: #fff;
+    color: var(--text-3);
+}
+
+p {
+    color: var(--text-grey);
+    font-family: var(--secondary-font);
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    word-spacing: 3px;
+}
+
+.btn {
+    --bs-btn-padding-x: 2.75rem;
+    --bs-btn-padding-y: 0.7rem;
+    --bs-btn-font-family: var(--secondary-font);
+    --bs-btn-hover-border-color: var(--text-primary);
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
 }
 
 /* End of global style */
@@ -112,7 +162,7 @@ section>.container>header>h3::before {
 /* Start of navbar */
 .navbar {
     --bs-navbar-nav-link-padding-x: 0;
-    /* --bs-navbar-nav-link-padding-y: 1; */
+    --bs-navbar-nav-link-padding-y: 1;
 }
 
 .navbar-nav {
@@ -128,7 +178,7 @@ section>.container>header>h3::before {
 }
 
 .nav a.nav-link {
-    color: #111111;
+    color: var(--text-primary);
     font-family: var(--secondary-font);
     font-size: 16px;
     line-height: 1.5625rem;
@@ -137,14 +187,14 @@ section>.container>header>h3::before {
 }
 
 .nav a.nav-link:hover {
-    color: #111111;
+    color: var(--text-primary);
 }
 
 .navbar-nav>li>a::after {
     content: "";
     width: 0;
     height: .1875rem;
-    background: #fff;
+    background: var(--text-3);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -157,11 +207,11 @@ section>.container>header>h3::before {
 }
 
 .navbar-nav>li>a::after {
-    background: #222;
+    background: var(--text-4);
 }
 
 .nav a.navbar-brand {
-    color: #1C1C1C;
+    color: var(--text-4);
     font-family: var(--primary-font);
     font-size: 1.5rem;
     line-height: 3.75rem;
@@ -171,7 +221,7 @@ section>.container>header>h3::before {
 }
 
 .nav .navbar-nav>li.nav-item {
-    color: #111111;
+    color: var(--text-primary);
     font-size: 1.02rem;
     line-height: 1.25rem;
     font-weight: 400;
@@ -196,7 +246,7 @@ section>.container>header>h3::before {
 }
 
 .header h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
     font-weight: 200;
     line-height: 2.25rem;
 }
@@ -214,11 +264,11 @@ section>.container>header>h3::before {
 /* Start of about */
 .about .about-img {
     position: relative;
-    transform: translate(-3%, -3%);
-    -webkit-transform: translate(-3%, -3%);
-    -moz-transform: translate(-3%, -3%);
-    -ms-transform: translate(-3%, -3%);
-    -o-transform: translate(-3%, -3%);
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%);
 }
 
 .about .about-img::after {
@@ -234,40 +284,26 @@ section>.container>header>h3::before {
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 1;
-    transform: translate(-4%, 5%);
-    -webkit-transform: translate(-4%, 5%);
-    -moz-transform: translate(-4%, 5%);
-    -ms-transform: translate(-4%, 5%);
-    -o-transform: translate(-4%, 5%);
-}
-
-.about h3 {
-    font-family: var(--primary-font);
-    color: #343434;
-    font-size: 2.425rem;
-    line-height: 2.0625rem;
-    margin-bottom: .75rem;
-    font-weight: 800;
-    text-transform: capitalize;
+    transform: translate(-4%, 4%);
+    -webkit-transform: translate(-4%, 4%);
+    -moz-transform: translate(-4%, 4%);
+    -ms-transform: translate(-4%, 4%);
+    -o-transform: translate(-4%, 4%);
 }
 
 .about>span {
     font-family: var(--secondary-font);
-    color: #999999;
+    color: var(--text-grey);
     font-size: 1.1875rem;
     line-height: 1.25rem;
-    margin-bottom: 1.25rem;
     font-weight: 500;
     text-transform: uppercase;
 }
 
-.about p {
-    font-family: var(--secondary-font);
-    color: #748182;
-    font-size: 20px;
-    line-height: 28px;
-    font-weight: 500;
-    max-width: 45rem;
+.about-content {
+    --bs-gutter-x: 2.8rem;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
 }
 
 .progress {
@@ -276,58 +312,29 @@ section>.container>header>h3::before {
     box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
-.btn {
-    --bs-btn-padding-x: 2.75rem;
-    --bs-btn-padding-y: 0.7rem;
-    --bs-btn-font-family: var(--secondary-font);
-    --bs-btn-hover-border-color: #000;
-    transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -ms-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-}
-
 .custom-btn {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--text-primary);
+    color: var(--text-3);
 }
 
 .about-btns>button:hover {
     background-color: transparent;
-    color: #000;
+    color: var(--text-primary);
 }
 
 .about-btns button:nth-child(2) {
     background-color: transparent;
-    border: 1px solid #000;
+    border: 1px solid var(--text-primary);
 }
 
 .about-btns button:nth-child(2):hover {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--text-primary);
+    color: var(--text-3);
 }
 
 /* End of about */
 
 /* Start of Services */
-.service h6 {
-    color: #343434;
-    font-family: var(--primary-font);
-    font-size: 22px;
-    line-height: 21px;
-    margin-bottom: 15px;
-    font-weight: 800;
-}
-
-.service p {
-    color: #748182;
-    font-family: var(--secondary-font);
-    font-size: 18px;
-    line-height: 26px;
-    word-spacing: 1.4px;
-    font-weight: 400;
-}
 
 /* End of Services */
 
@@ -337,15 +344,15 @@ section>.container>header>h3::before {
 }
 
 .portfolio .nav-pills {
-    --bs-nav-pills-link-active-color: #222222;
+    --bs-nav-pills-link-active-color: var(--text-4);
     --bs-nav-pills-link-active-bg: transparent;
     --bs-nav-pills-border-radius: none;
 }
 
 .portfolio .nav {
     --bs-nav-link-font-weight: 700;
-    --bs-nav-link-hover-color: #222222;
-    --bs-nav-link-color: #222222;
+    --bs-nav-link-hover-color: var(--text-4);
+    --bs-nav-link-color: var(--text-4);
 }
 
 .portfolio .nav-link {
@@ -361,7 +368,7 @@ section>.container>header>h3::before {
     bottom: 0;
     height: 3px;
     width: 0;
-    background-color: #222222;
+    background-color: var(--text-4);
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -372,10 +379,6 @@ section>.container>header>h3::before {
 .portfolio .nav-link.active::after,
 .portfolio .nav-link.show::after {
     width: 100%;
-}
-
-.portfolio .custom {
-    line-height: 22.8571px;
 }
 
 .portfolio figcaption.fig-caption {
@@ -393,10 +396,15 @@ section>.container>header>h3::before {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #000;
+    color: var(--text-primary);
 }
 
 .portfolio figcaption.fig-caption h6 {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 2px;
+    font-weight: 700;
     transform: translateY(-50px);
     -webkit-transform: translateY(-50px);
     -moz-transform: translateY(-50px);
@@ -431,7 +439,7 @@ section>.container>header>h3::before {
     right: 0;
     top: 20px;
     bottom: 0px;
-    background-color: rgba(255, 255, 255, 0.878);
+    background-color: var(--text-5);
     opacity: 0;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
@@ -472,31 +480,24 @@ section>.container>header>h3::before {
     opacity: 1;
 }
 
-.portfolio h6 {
-    color: #343434;
-    font-family: var(--primary-font);
-    font-size: 14px;
-    line-height: 15px;
-    letter-spacing: 2px;
-    font-weight: 700;
-}
-
 .portfolio .modal {
     --bs-modal-width: 100%;
-    --bs-modal-color: #fff;
-    --bs-modal-bg: #00000052;
+    --bs-modal-color: var(--text-3);
+    --bs-modal-bg: var(--bg-dark);
     --bs-modal-margin: 0;
-    --bs-modal-border-color: transparent; 
+    --bs-modal-border-color: transparent;
     --bs-modal-border-width: 0;
     --bs-modal-border-radius: 0;
 }
 
 .portfolio .btn-close {
-    position: relative;
-    left: 90%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
     --bs-btn-close-bg: url();
-    --bs-btn-close-focus-shadow: #fff;
-    color: #fff;
+    --bs-btn-close-focus-shadow: var(--text-3);
+    color: var(--text-3);
     font-size: 30px;
     font-weight: 600;
     display: flex;
@@ -512,33 +513,13 @@ section>.container>header>h3::before {
 /* End of portfolio */
 
 /* Start of testimonials */
-.work {
-    font-family: var(--secondary-font);
-}
-
 .work img {
     width: 7rem;
 }
 
-.work p {
-    color: #748182;
-    font-size: 20px;
-    line-height: 28px;
-    word-spacing: 3px;
-    font-weight: 400;
-}
-
-.work h6 {
-    color: #343434;
-    font-family: var(--primary-font);
-    font-size: 20px;
-    line-height: 18.5px;
-    margin: 30px 0 5px;
-    font-weight: 600;
-}
-
 .work span {
-    color: #888888;
+    font-family: var(--secondary-font);
+    color: var(--text-grey);
     font-size: 15px;
     line-height: 18.5px;
     margin-bottom: 3px;
@@ -558,7 +539,7 @@ section>.container>header>h3::before {
     height: 15px;
     width: 14px;
     border-radius: 50%;
-    background-color: #00000060;
+    background-color: var(--bg-dark);
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -569,39 +550,18 @@ section>.container>header>h3::before {
 /* End of testimonials */
 
 /* Start of numbers */
-.numbers h3 {
-    color: #343434;
-    font-family: var(--primary-font);
-    font-size: 32px;
-    line-height: 35px;
-    font-weight: 900;
-}
 
-.numbers p {
-    color: #748182;
-    font-family: var(--secondary-font);
-    font-size: 18px;
-    line-height: 28px;
-    font-weight: 600;
-}
 /* End of numbers */
 
 /* Start of team */
-.team h4 {
+.team h4,
+.team h5 {
     font-family: var(--primary-font);
     font-size: 26px;
     line-height: 28px;
     margin-bottom: 15px;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: capitalize;
-}
-
-.team h5 {
-    font-family: var(--primary-font);
-    font-size: 21px;
-    line-height: 23px;
-    font-weight: 700;
-    text-transform: uppercase;
 }
 
 .team .card {
@@ -631,7 +591,7 @@ section>.container>header>h3::before {
     right: 10px;
     top: 10px;
     bottom: 10px;
-    background-color: rgba(255, 255, 255, 0.878);
+    background-color: var(--text-5);
     z-index: 66;
     opacity: 0;
     transition: all 0.4s ease;
@@ -650,7 +610,7 @@ section>.container>header>h3::before {
 }
 
 .team .card-inner a {
-    color: #fff;
+    color: var(--text-3);
     transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
@@ -659,12 +619,12 @@ section>.container>header>h3::before {
 }
 
 .team .card-inner .icon:hover a {
-    color: #000;
+    color: var(--text-primary);
 }
 
 .team .card-inner .team-icons .icon {
-    border: 0 solid #000;
-    background-color: #000;
+    border: 0 solid var(--text-primary);
+    background-color: var(--text-primary);
     transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
@@ -673,7 +633,7 @@ section>.container>header>h3::before {
 }
 
 .team .card-inner .icon:hover {
-    background-color: #fff;
+    background-color: var(--text-3);
     border-width: 1px;
 }
 
@@ -685,30 +645,14 @@ section>.container>header>h3::before {
     -ms-transform: rotateY(360deg);
     -o-transform: rotateY(360deg);
     border-width: 1px;
-    color: #000;
+    color: var(--text-primary);
 }
+
 /* End of team */
 
 /* Start of contact */
-.contact h6 {
-    color: #343434;
-    font-family: var(--primary-font);
-    font-size: 20px;
-    line-height: 19px;
-    font-weight: 700;
-    text-transform: capitalize;
-}
-
-.contact p {
-    color: #748182;
-    font-family: var(--secondary-font);
-    font-size: 16px;
-    line-height: 25px;
-    font-weight: 400;
-}
-
 .contact .inner>[class~="form-control"] {
-    --bs-body-bg: #F4F4F4;
+    --bs-body-bg: var(--bg-main);
     --bs-border-width: 0;
 }
 
@@ -720,17 +664,7 @@ section>.container>header>h3::before {
 
 /* Start of footer */
 .footer {
-    background-color: #1C1C1C;
-}
-
-.footer p {
-    color: #748182;
-    font-family: var(--secondary-font);
-    font-size: 15px;
-    line-height: 22px;
-    word-spacing: 3px;
-    font-weight: 400;
-    margin-bottom: 0;
+    background-color: var(--text-4);
 }
 
 /* End of footer */
