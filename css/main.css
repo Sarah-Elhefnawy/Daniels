@@ -92,7 +92,7 @@ section>.container>header>h3::before {
     opacity: 0.5;
 }
 
-h6.text {
+h4.text {
     color: var(--text-secondary);
     font-family: var(--primary-font);
     font-size: 22px;
@@ -257,7 +257,7 @@ p {
     font-family: var(--primary-font), sans-serif;
 }
 
-.header h5 {
+.header h2 {
     font-size: 4.0625rem;
     font-weight: 800;
     line-height: 3.4375rem;
@@ -417,7 +417,7 @@ p {
     color: var(--text-primary);
 }
 
-.work .fig-caption h6 {
+.work .fig-caption h4 {
     color: var(--text-secondary);
     font-size: 14px;
     line-height: 15px;
@@ -485,7 +485,7 @@ p {
     -o-transform: translateY(-10px);
 }
 
-.work figure.work-img:hover h6 {
+.work figure.work-img:hover h4 {
     transform: translateY(10px);
     -webkit-transform: translateY(10px);
     -moz-transform: translateY(10px);
