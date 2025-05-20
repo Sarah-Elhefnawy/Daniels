@@ -1,4 +1,16 @@
 @media (min-width: 992px) {
+    .navbar:not(.scrolled) .navbar-nav .nav-link {
+        color: white !important;
+    }
+
+    .navbar:not(.scrolled) .navbar-nav>li>a::after {
+        background: white !important;
+    }
+
+    .navbar-bg {
+        background-color: transparent;
+    }
+
     .header h1 {
         font-size: 4.4rem;
     }

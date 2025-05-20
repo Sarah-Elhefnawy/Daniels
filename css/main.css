@@ -164,12 +164,35 @@ p {
     --bs-navbar-nav-link-padding-x: 0;
     --bs-navbar-nav-link-padding-y: 1;
     --bs-navbar-brand-font-size: 1.5rem;
+    --bs-navbar-color: var(--text-primary);
+    --bs-navbar-active-color: var(--text-primary);
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.navbar-bg {
+    background-color: var(--text-3);
 }
 
 .navbar-nav {
     --bs-nav-link-padding-y: 0.15rem;
-    --bs-nav-link-color: var(--text-primary);
-    --bs-nav-link-hover-color: var(--text-primary);
+}
+
+.navbar.scrolled {
+    background-color: var(--text-3);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.nav a.navbar-brand.scrolled {
+    color: var(--text-primary);
 }
 
 .navbar-toggler {
@@ -192,7 +215,6 @@ p {
     content: "";
     width: 0;
     height: .1875rem;
-    background: var(--text-3);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -205,7 +227,7 @@ p {
 }
 
 .navbar-nav>li>a::after {
-    background: var(--text-4);
+    background: var(--text-primary);
 }
 
 .nav a.navbar-brand {
@@ -214,10 +236,10 @@ p {
     letter-spacing: .0625rem;
     padding: .125rem 0 0;
     font-weight: 800;
+    color: var(--text-3);
 }
 
 .nav .navbar-nav>li.nav-item {
-    color: var(--text-primary);
     font-size: 1.02rem;
     line-height: 1.25rem;
     font-weight: 400;
@@ -229,7 +251,7 @@ p {
 /* Start of header */
 .header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7)), url(./../images/bg.jpg);
-    background-position: 0px 0px;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     font-family: var(--primary-font), sans-serif;
