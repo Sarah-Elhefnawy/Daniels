@@ -163,10 +163,13 @@ p {
 .navbar {
     --bs-navbar-nav-link-padding-x: 0;
     --bs-navbar-nav-link-padding-y: 1;
+    --bs-navbar-brand-font-size: 1.5rem;
 }
 
 .navbar-nav {
     --bs-nav-link-padding-y: 0.15rem;
+    --bs-nav-link-color: var(--text-primary);
+    --bs-nav-link-hover-color: var(--text-primary);
 }
 
 .navbar-toggler {
@@ -177,17 +180,12 @@ p {
     box-shadow: none;
 }
 
-.nav a.nav-link {
-    color: var(--text-primary);
+.nav a.custom-navbar-link {
     font-family: var(--secondary-font);
     font-size: 16px;
     line-height: 1.5625rem;
     font-weight: 400;
     display: inline-block;
-}
-
-.nav a.nav-link:hover {
-    color: var(--text-primary);
 }
 
 .navbar-nav>li>a::after {
@@ -211,9 +209,7 @@ p {
 }
 
 .nav a.navbar-brand {
-    color: var(--text-4);
     font-family: var(--primary-font);
-    font-size: 1.5rem;
     line-height: 3.75rem;
     letter-spacing: .0625rem;
     padding: .125rem 0 0;
@@ -246,7 +242,7 @@ p {
 }
 
 .header h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 200;
     line-height: 2.25rem;
 }
@@ -338,30 +334,30 @@ p {
 
 /* End of Services */
 
-/* Start of portfolio */
-.portfolio {
+/* Start of work */
+.work {
     font-family: var(--secondary-font);
 }
 
-.portfolio .nav-pills {
+.work .nav-pills {
     --bs-nav-pills-link-active-color: var(--text-4);
     --bs-nav-pills-link-active-bg: transparent;
     --bs-nav-pills-border-radius: none;
 }
 
-.portfolio .nav {
+.work .nav {
     --bs-nav-link-font-weight: 700;
     --bs-nav-link-hover-color: var(--text-4);
     --bs-nav-link-color: var(--text-4);
 }
 
-.portfolio .nav-link {
+.work .nav-link {
     position: relative;
     --bs-nav-link-font-size: 18px;
 }
 
-.portfolio .nav-link::after,
-.nav-pills .show>.nav-link::after {
+.work .custom-nav-link::after,
+.nav-pills .show>.custom-nav-link::after {
     content: "";
     position: absolute;
     left: 0;
@@ -376,12 +372,12 @@ p {
     -o-transition: all 0.5s ease;
 }
 
-.portfolio .nav-link.active::after,
-.portfolio .nav-link.show::after {
+.work .custom-nav-link.active::after,
+.work .custom-nav-link.show::after {
     width: 100%;
 }
 
-.portfolio figcaption.fig-caption {
+.work .fig-caption {
     position: absolute;
     top: 20%;
     right: 0;
@@ -399,7 +395,7 @@ p {
     color: var(--text-primary);
 }
 
-.portfolio figcaption.fig-caption h6 {
+.work .fig-caption h6 {
     color: var(--text-secondary);
     font-size: 14px;
     line-height: 15px;
@@ -418,7 +414,7 @@ p {
     opacity: 0;
 }
 
-.portfolio figcaption.fig-caption .icon {
+.work .fig-caption .icon {
     opacity: 0;
     transform: translateY(10px);
     -webkit-transform: translateY(10px);
@@ -432,7 +428,7 @@ p {
     -o-transition: all 0.5s ease;
 }
 
-.portfolio figure.portfolio-img::before {
+.work figure.work-img::before {
     content: "";
     position: absolute;
     left: 0;
@@ -454,11 +450,11 @@ p {
     -o-transform: translateY(0);
 }
 
-.portfolio .card:hover figcaption.fig-caption {
+.work .card:hover .fig-caption {
     top: 0;
 }
 
-.portfolio figure.portfolio-img:hover::before {
+.work figure.work-img:hover::before {
     opacity: 1;
     transform: translateY(-10px);
     -webkit-transform: translateY(-10px);
@@ -467,7 +463,7 @@ p {
     -o-transform: translateY(-10px);
 }
 
-.portfolio figure.portfolio-img:hover h6 {
+.work figure.work-img:hover h6 {
     transform: translateY(10px);
     -webkit-transform: translateY(10px);
     -moz-transform: translateY(10px);
@@ -476,11 +472,11 @@ p {
     opacity: 1;
 }
 
-.portfolio figure.portfolio-img:hover .icon {
+.work figure.work-img:hover .icon {
     opacity: 1;
 }
 
-.portfolio .modal {
+.work .modal {
     --bs-modal-width: 100%;
     --bs-modal-color: var(--text-3);
     --bs-modal-bg: var(--bg-dark);
@@ -490,7 +486,7 @@ p {
     --bs-modal-border-radius: 0;
 }
 
-.portfolio .btn-close {
+.work .btn-close {
     position: absolute;
     top: 0;
     right: 0;
@@ -510,14 +506,14 @@ p {
     justify-content: center;
 }
 
-/* End of portfolio */
+/* End of work */
 
-/* Start of testimonials */
-.work img {
+/* Start of client */
+.client img {
     width: 7rem;
 }
 
-.work span {
+.client span {
     font-family: var(--secondary-font);
     color: var(--text-grey);
     font-size: 15px;
@@ -526,16 +522,16 @@ p {
     font-weight: 600;
 }
 
-.carousel-inner {
+.client .carousel-inner {
     cursor: grab;
     user-select: none;
 }
 
-.carousel-inner:active {
+.client .carousel-inner:active {
     cursor: grabbing;
 }
 
-.work .carousel-indicators [data-bs-target] {
+.client .carousel-indicators [data-bs-target] {
     height: 15px;
     width: 14px;
     border-radius: 50%;
@@ -547,7 +543,7 @@ p {
     margin-right: 12px;
 }
 
-/* End of testimonials */
+/* End of client */
 
 /* Start of numbers */
 
