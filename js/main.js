@@ -51,20 +51,20 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Navbar list item before pseudo class
-const sections = document.querySelectorAll('section');
-function updateActiveNav() {
-    let currentSection = '#home';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (scrollY >= sectionTop - 80) {
-            currentSection = '#' + section.getAttribute('id');
-        }
-    });
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === currentSection) {
-            link.classList.add('active');
-        }
-    });
-}
-window.addEventListener('scroll', updateActiveNav);
+// const sections = document.querySelectorAll('section');
+// function updateActiveNav() {
+//     let currentSection = '#home';
+//     sections.forEach(section => {
+//         const sectionTop = section.offsetTop;
+//         if (scrollY >= sectionTop - 80) {
+//             currentSection = '#' + section.getAttribute('id');
+//         }
+//     });
+//     navLinks.forEach(link => {
+//         link.classList.remove('active');
+//         if (link.getAttribute('href') === currentSection) {
+//             link.classList.add('active');
+//         }
+//     });
+// }
+// window.addEventListener('scroll', updateActiveNav);
